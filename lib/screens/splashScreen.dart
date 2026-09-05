@@ -17,7 +17,6 @@ class _SplashState extends State<Splash> {
         MaterialPageRoute(builder: (c) => HomeScreen()),
       );
     });
-    // TODO: implement initState
     super.initState();
   }
 

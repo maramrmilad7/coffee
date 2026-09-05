@@ -1,4 +1,3 @@
-import 'package:demoo/screens/homesreen.dart';
 import 'package:demoo/screens/splashScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -11,10 +10,6 @@ class CoffeeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Splash(),
-      title: 'McDonald',
-      debugShowCheckedModeBanner: false,
-    );
+    return MaterialApp(home: Splash(), debugShowCheckedModeBanner: false);
   }
 }
