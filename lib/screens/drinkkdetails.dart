@@ -19,7 +19,6 @@ class _DrinkDetailsState extends State<DrinkDetails> {
         _currentPage = _controller.page ?? 0;
       });
     });
-    // TODO: implement initState
     super.initState();
   }
 
@@ -37,6 +36,33 @@ class _DrinkDetailsState extends State<DrinkDetails> {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          Positioned(
+            top: 80,
+            left: 20,
+            right: 20,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      drinks[_currentPage.round()].title,
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(drinks[_currentPage.round()].subTitle),
+                  ],
+                ),
+                Text(
+                  "${drinks[_currentPage.round()].price}",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
           PageView.builder(
             controller: _controller,
             itemCount: drinks.length,
