@@ -33,11 +33,17 @@ class _DrinkDetailsState extends State<DrinkDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: Icon(Icons.arrow_back_ios, color: Colors.black),
+        ),
+      ),
       backgroundColor: Colors.white,
       body: Stack(
         children: [
           Positioned(
-            top: 80,
+            // top: 80,
             left: 20,
             right: 20,
             child: Row(
@@ -77,10 +83,12 @@ class _DrinkDetailsState extends State<DrinkDetails> {
                   scale: scale.clamp(0.5, 1.0),
                   child: Column(
                     children: [
-                      Image.asset(
-                        drinks[index].image,
-                        height: 900,
-                        fit: BoxFit.contain,
+                      Expanded(
+                        child: Image.asset(
+                          drinks[index].image,
+                          height: 900,
+                          fit: BoxFit.contain,
+                        ),
                       ),
                       Positioned(
                         bottom: 200,
