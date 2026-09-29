@@ -1,5 +1,6 @@
 import 'package:demoo/models/drinkmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class DrinkDetails extends StatefulWidget {
   const DrinkDetails({super.key});
@@ -12,6 +13,7 @@ class _DrinkDetailsState extends State<DrinkDetails> {
   final PageController _controller = PageController(viewportFraction: 0.50);
   double drinkSize = 1.1;
   double _currentPage = 0;
+  int? selectedSize;
   @override
   void initState() {
     _controller.addListener(() {
@@ -43,7 +45,6 @@ class _DrinkDetailsState extends State<DrinkDetails> {
       body: Stack(
         children: [
           Positioned(
-            // top: 80,
             left: 20,
             right: 20,
             child: Row(
@@ -102,6 +103,48 @@ class _DrinkDetailsState extends State<DrinkDetails> {
                 ),
               );
             },
+          ),
+
+          Positioned(
+            left: 20,
+            right: 20,
+            bottom: 60,
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: List.generate(4, (index) {
+                    return GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedSize = index;
+                        });
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(11),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: selectedSize == index
+                              ? Colors.orange
+                              : Colors.white,
+                          border: Border.all(
+                            color: selectedSize == index
+                                ? Colors.orange
+                                : Colors.black,
+                          ),
+                        ),
+                        child: SvgPicture.asset(
+                          "assets/Vector.svg",
+                          color: selectedSize == index
+                              ? Colors.white
+                              : Colors.black,
+                        ),
+                      ),
+                    );
+                  }),
+                ),
+              ],
+            ),
           ),
         ],
       ),
