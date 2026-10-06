@@ -65,7 +65,10 @@ flutter:
     - assets/cart.png
     - assets/logo/
     - assets/drinks/
-    - assets/screens/
+    - screens/Screenshot_1791308725.png
+    - screens/Screenshot_1791308726.png
+    - screens/Screenshot_1791308731.png
+    - screens/Screenshot_1791308740.png
 
   #   - images/a_dot_ham.jpeg
 
