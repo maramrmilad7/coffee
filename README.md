@@ -19,11 +19,11 @@
 
 | Home Screen | Drink Details | Size Selector |
 | :---: | :---: | :---: |
-| ![Home](assets/screens/Screenshot_1791308725.png) | ![Details](assets/screens/Screenshot_1791308726.png) | ![Size](assets/screens/Screenshot_1791308731.png) |
+| ![Home](screens/Screenshot_1791308725.png) | ![Details](screens/Screenshot_1791308726.png) | ![Size](screens/Screenshot_1791308731.png) |
 
 | Quantity |
 | :---: | 
-| ![Quantity](assets/screens/Screenshot_1791308740.png) | 
+| ![Quantity](screens/Screenshot_1791308740.png) | 
 
 </div>
 
